@@ -5,7 +5,7 @@ import HomePage from './pages/HomePage'
 
 function App() {
   return (
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-4">
+    <div className="mx-auto max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8 pt-3 sm:pt-4">
       <Navbar />
       <HomePage />
     </div>
