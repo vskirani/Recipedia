@@ -1,6 +1,7 @@
 import foto1 from "../assets/image/hero.png";
 import CategoryList from "../components/CategoryList";
 import ProductCard from "../components/ProductCard";
+import TestimonialSection from "../components/TestimonialSection";
 import { products } from "../data/products";
 
 
@@ -48,10 +49,8 @@ export default function HomePage() {
     {/* POPULAR */}
       <div className="mt-10 sm:mt-16 lg:mt-20">
         
-        <div className="flex flex-col text-center sm:text-left">
-          <h2 className="font-poppins text-xl sm:text-2xl lg:text-[32px] font-bold">Popular This Week</h2>
-          <p className="text-sm sm:text-base text-gray-600">Paling sering dimasak minggu ini</p>
-        </div>
+        <h2 className="font-poppins text-xl sm:text-2xl lg:text-[32px] font-bold">Menu Favorite</h2>
+        
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-6">
           {popularProducts.map((item) => (
@@ -59,6 +58,8 @@ export default function HomePage() {
           ))}
         </div>
       </div>
+
+      <TestimonialSection />
 
       
     </main>

@@ -1,12 +1,13 @@
 import { useState } from "react";
 import logo from "../assets/logo2.png";
+import profile from "../assets/image/avatar/avatar4.svg"
 
 export default function Navbar() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-orange-50 mb-4 px-4 sm:px-6 py-3 rounded-[20px]">
+    <header className=" mb-4 px-4 sm:px-6 py-3 rounded-[20px]">
       <div className="flex items-center justify-between">
 
         <div className="flex items-center">
@@ -59,7 +60,8 @@ export default function Navbar() {
               }`}
             />
           </div>
-          <img className="w-8 h-8 sm:w-10 sm:h-10 lg:w-[45px] lg:h-[45px]" src="https://img.icons8.com/plasticine/100/user-male-circle.png" alt="user-male-circle"/>
+
+          <img className="w-8 h-8 sm:w-10 sm:h-10 lg:w-[45px] lg:h-[45px]" src={profile} alt="user profile"/>
           
           {/* Mobile Menu Button */}
           <button
