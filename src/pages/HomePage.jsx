@@ -1,14 +1,14 @@
 import foto1 from "../assets/image/hero.png";
-import ProductList from "../components/ProductList";
 import CategoryList from "../components/CategoryList";
+import ProductCard from "../components/ProductCard";
 import { products } from "../data/products";
 
 
 export default function HomePage() {
-
-  const favoriteProducts = [...products]
+  // Ambil 4 produk dengan likes terbanyak
+  const popularProducts = [...products]
     .sort((a, b) => b.likes - a.likes)
-    .slice(0, 3);
+    .slice(0, 4);
 
   return (
     <main>
@@ -37,6 +37,7 @@ export default function HomePage() {
         />
       </section>
 
+      {/* CATEGORY */}
       <div className="flex flex-col mt-10 sm:mt-10 lg:mt-10">
         <h2 className="font-poppins text-xl sm:text-2xl lg:text-[32px] font-bold mb-6">
           Category
@@ -44,22 +45,17 @@ export default function HomePage() {
         <CategoryList/>
       </div>
 
+    {/* POPULAR */}
       <div className="mt-10 sm:mt-16 lg:mt-20">
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-0 justify-between items-center sm:items-start">
-          {/* left content */}
-          <div className="flex flex-col text-center sm:text-left">
-            <h2 className="font-poppins text-xl sm:text-2xl lg:text-[32px] font-bold">Popular This Week</h2>
-            <p className="text-sm sm:text-base text-gray-600">Paling sering dimasak minggu ini</p>
-          </div>
-          
-          <button className="bg-primary text-white py-2 px-6 sm:px-8 rounded-[10px] font-poppins font-medium text-sm sm:text-base">
-            See All
-          </button>
+        
+        <div className="flex flex-col text-center sm:text-left">
+          <h2 className="font-poppins text-xl sm:text-2xl lg:text-[32px] font-bold">Popular This Week</h2>
+          <p className="text-sm sm:text-base text-gray-600">Paling sering dimasak minggu ini</p>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {favoriteProducts.map((item) => (
-            <ProductList key={item.id} item={item} />
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-6">
+          {popularProducts.map((item) => (
+            <ProductCard key={item.id} item={item} />
           ))}
         </div>
       </div>

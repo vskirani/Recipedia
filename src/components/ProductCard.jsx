@@ -9,6 +9,10 @@ export default function ProductCard({ item }) {
           className="w-full h-40 sm:h-48 md:h-56 object-cover"
         />
 
+        <div className="absolute top-3 right-3 bg-white/80 backdrop-blur px-2 py-1 rounded-full text-sm">
+          ❤️ {item.likes}
+        </div>
+
         <div className="absolute bottom-0 left-0 w-full">
           <div className="px-3 sm:px-4 py-2 
                           backdrop-blur-[10px] 
@@ -16,9 +20,6 @@ export default function ProductCard({ item }) {
             
             <div className="flex items-center gap-1 text-green-600">
               ⏱ <span>{item.calories} Cal</span>
-            </div>
-            <div className="flex items-center gap-1 text-green-600">
-              💗 <span>{item.likes} Likes</span>
             </div>
             <div className="flex items-center gap-1 text-green-600 font-medium">
               📊 <span className="truncate max-w-[80px] sm:max-w-none">{item.category}</span>
