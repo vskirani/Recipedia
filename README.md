@@ -1,16 +1,96 @@
-# React + Vite
+# 🍽️ Recipedia — Food Recipes Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-18-blue)
+![Vite](https://img.shields.io/badge/Vite-fast-purple)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-utility--first-38bdf8)
+![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
 
-Currently, two official plugins are available:
+> A responsive food recipes website built with React, inspired by a modern Figma community design.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Recipedia** is a frontend practice project focused on slicing UI from Figma into a real, responsive website using modern frontend tools. This project emphasizes clean layouts, reusable components, and responsive design best practices.
 
-## Expanding the ESLint configuration
+The project is developed progressively and deployed early to simulate a real-world frontend workflow.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🎯 Goals
+
+* Practice **React + Vite** workflow
+* Implement **responsive UI** with Tailwind CSS
+* Learn **UI slicing from Figma** into code
+* Build a **portfolio-ready frontend project**
+* Apply **continuous deployment** using Vercel
+
+---
+
+## 🖼️ Design Reference
+
+The UI design is initially inspired by several free templates from the **Figma Community**, then further **developed and customized with my own creative ideas** to better suit the project goals and improve usability.
+
+One of the main references:
+
+**Tastebite — Food Recipe Website Templates**
+Designed by the Figma Community
+
+🔗 [https://www.figma.com/design/0agHKz5LB4dS1NH5xhgKxb/Tastebite---Food-Recipe-Website-Templates---Design-Systems--Community-](https://www.figma.com/design/0agHKz5LB4dS1NH5xhgKxb/Tastebite---Food-Recipe-Website-Templates---Design-Systems--Community-)
+
+> This project is created for learning and portfolio purposes only. All design credits for the original templates belong to their respective creators.
+
+---
+
+## 🛠️ Tech Stack
+
+* ⚛️ **React** (Vite)
+* 🎨 **Tailwind CSS**
+* 🚀 **Vercel** (Deployment)
+* 🧩 **Figma** (UI Reference)
+
+---
+
+## 🚧 Project Status
+
+🟡 **In Progress**
+
+The project is currently under development. Pages and features will be added incrementally.
+
+**Planned sections:**
+
+* Home Page
+* Recipes List
+* Recipe Detail Page
+* About & Footer Section
+
+-
+
+## 🌍 Deployment
+
+This project is deployed using **Vercel**.
+
+🔗 **Live Demo**: *Coming Soon*
+
+Each update pushed to the main branch will automatically trigger a new deployment.
+
+> The live demo link will be added once the main layout is completed.
+
+---
+
+## 📌 Notes
+
+* This project focuses on **frontend development only**
+* No backend or database integration yet
+* API integration may be added in future iterations
+
+---
+
+## 🙌 Author
+
+**Vitri Septia Kirani**
+Frontend Developer — Learning & Growing 🌱
+
+---
+
+✨ *Recipedia represents my learning journey in modern frontend development and UI implementation.*
