@@ -64,7 +64,7 @@ The project is currently under development. Pages and features will be added inc
 * Recipe Detail Page
 * About & Footer Section
 
--
+----
 
 ## 🌍 Deployment
 
