@@ -1,22 +1,42 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import logo from "../assets/logo2.png";
 import profile from "../assets/image/avatar/avatar4.svg"
 
 export default function Navbar() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
 
   return (
-    <header className=" mb-4 px-4 sm:px-6 py-3 rounded-[20px]">
+    <header
+      className={`sticky top-4 z-50 transition-all duration-300 rounded-2xl
+      ${isScrolled 
+        ? "bg-white/90 backdrop-blur-md shadow-md"
+        : "bg-transparent"
+      }
+      px-4 sm:px-6 py-3`}>
       <div className="flex items-center justify-between">
 
         <div className="flex items-center">
           <img
             src={logo}
             alt="Tastebite Logo"
-            className="h-10 sm:h-12 lg:h-15 w-auto"
+            className="h-8 sm:h-12 lg:h-10 w-auto"
           />
-          <p className="ml-2 text-xl sm:text-2xl text-primary" style={{ fontFamily: 'var(--font-family-pacifico)' }}>
+          <p className="ml-2 text-xl sm:text-2xl text-primary font-family-poppins font-bold">
             Recipedia</p>
         </div>
 

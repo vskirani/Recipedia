@@ -1,19 +1,24 @@
-import makananUtama from "../assets/image/mn.png";
+import makananUtama from "../assets/image/maincourse.png";
+import sarapan from "../assets/image/sarapan.png";
+import dessert from "../assets/image/dessert.png";
+import snack from "../assets/image/snack.png";
+import drink from "../assets/image/drink.png";
+
 import {products} from "../data/products";
 import CategoryCard from "./CategoryCard";
 
 const categoryImages ={
     "Makanan Utama": makananUtama,
-    "Sarapan": makananUtama,
-    "Dessert": makananUtama,
-    "Cemilan": makananUtama,
-    "Minuman": makananUtama,
+    "Sarapan": sarapan,
+    "Dessert": dessert,
+    "Cemilan": snack,
+    "Minuman": drink,
 
 }
 export default function CategoryList(){
     const categories = [... new Set(products.map((item)=> item.category))];
     return(
-        <div className="flex gap-6 justify-center overflow-x-auto">
+        <div className="flex justify-between overflow-x-auto">
             {categories.map((category) => (
                 <CategoryCard
                 key={category}

@@ -13,8 +13,8 @@ export default function HomePage() {
 
   return (
     <main>
-      {/* section hero */}
-      <section className="flex flex-col-reverse lg:flex-row w-full items-center justify-between gap-8 lg:gap-x-14">
+      {/* HERO */}
+      <section className="pt-24 sm:pt-28 lg:pt-32 flex flex-col-reverse animate-zoom-in lg:flex-row w-full items-center justify-between gap-8 lg:gap-x-14">
         {/* left content */}
         <div className="flex flex-col gap-4 sm:gap-6 text-center lg:text-left">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-none">
@@ -39,17 +39,17 @@ export default function HomePage() {
       </section>
 
       {/* CATEGORY */}
-      <div className="flex flex-col mt-10 sm:mt-10 lg:mt-10">
+      <div className="flex flex-col mt-16 sm:mt-20 lg:mt-28">
         <h2 className="font-poppins text-xl sm:text-2xl lg:text-[32px] font-bold mb-6">
           Category
         </h2>
         <CategoryList/>
       </div>
 
-    {/* POPULAR */}
-      <div className="mt-10 sm:mt-16 lg:mt-20">
+      {/* POPULAR */}
+      <div className="mt-12 sm:mt-16 lg:mt-20">
         
-        <h2 className="font-poppins text-xl sm:text-2xl lg:text-[32px] font-bold">Menu Favorite</h2>
+        <h2 className="font-family-poppins text-xl sm:text-2xl lg:text-[32px] font-bold">Menu Favorite</h2>
         
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-6">
@@ -59,7 +59,10 @@ export default function HomePage() {
         </div>
       </div>
 
+      {/* TESTIMONIAL */}
       <TestimonialSection />
+
+
 
       
     </main>
