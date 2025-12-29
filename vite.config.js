@@ -7,5 +7,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/Recipedia/',
+  base: process.env.GITHUB_PAGES ? '/Recipedia/' : '/',
 })
