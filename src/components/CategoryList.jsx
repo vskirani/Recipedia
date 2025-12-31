@@ -18,14 +18,15 @@ const categoryImages ={
 export default function CategoryList(){
     const categories = [... new Set(products.map((item)=> item.category))];
     return(
-        <div className="flex justify-between overflow-x-auto">
-            {categories.map((category) => (
-                <CategoryCard
-                key={category}
-                title={category}
-                image={categoryImages[category]}
-                onClick={() => console.log(category)}
-                />
+        <div className="flex justify-between overflow-x-auto scrollbar-hide">
+            {categories.map((category, index) => (
+                <div key={category} data-aos="flip-up" data-aos-delay={index * 150}>
+                    <CategoryCard
+                        title={category}
+                        image={categoryImages[category]}
+                        onClick={() => console.log(category)}
+                    />
+                </div>
             ))}
 
         </div>

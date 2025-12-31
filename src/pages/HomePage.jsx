@@ -12,34 +12,56 @@ export default function HomePage() {
     .slice(0, 4);
 
   return (
-    <main>
+    <main className="pt-8">
       {/* HERO */}
-      <section className="pt-24 sm:pt-28 lg:pt-32 flex flex-col-reverse animate-zoom-in lg:flex-row w-full items-center justify-between gap-8 lg:gap-x-14">
+      <section className="flex flex-col-reverse lg:flex-row w-full items-center justify-between gap-8 lg:gap-x-14">
         {/* left content */}
-        <div className="flex flex-col gap-4 sm:gap-6 text-center lg:text-left">
+        <div className="flex flex-col gap-4 sm:gap-6 text-center lg:text-left" data-aos="flip-down">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-none">
-            Cooking Made Fun and Easy
+            Masak Praktis Tanpa Ribet
           </h1>
 
           <p className="font-poppins text-base sm:text-lg text-gray-600 max-w-lg mx-auto lg:mx-0">
-            Temukan resep favoritmu, dari yang simpel sampai spesial. Masak jadi lebih santai, tanpa ribet.
+            Resep favorit untuk masakan simpel hingga spesial, kapan saja kam
           </p>
-
-          <button className="bg-primary text-white py-2 sm:py-3 px-8 sm:px-12 lg:px-18 rounded-[10px] font-poppins w-fit font-medium mx-auto lg:mx-0">
-            Lihat Resep
+          
+          <button
+            className="relative inline-flex items-center px-6 py-3 overflow-hidden font-medium transition-all bg-primary rounded-md group w-fit mx-auto lg:mx-0"
+          >
+            <span
+              className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-orange-500 rounded group-hover:-mr-4 group-hover:-mt-4"
+            >
+              <span
+                className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"
+              ></span>
+            </span>
+            <span
+              className="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-orange-500 rounded group-hover:-ml-4 group-hover:-mb-4"
+            >
+              <span
+                className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"
+              ></span>
+            </span>
+            <span
+              className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-orange-400 rounded-md group-hover:translate-x-0"
+            ></span>
+            <span
+              className="relative text-white transition-colors duration-200 ease-in-out group-hover:text-white"
+            >Jelajahi Resep</span>
           </button>
+
         </div>
 
         {/* right content */}
         <img 
           src={foto1} 
           alt="Cooking Illustration" 
-          className="w-48 sm:w-64 md:w-80 lg:w-[420px] xl:w-[520px] h-auto" 
+          className="w-48 sm:w-64 md:w-80 lg:w-[420px] xl:w-[520px] h-auto object-contain" data-aos="zoom-in" 
         />
       </section>
 
       {/* CATEGORY */}
-      <div className="flex flex-col mt-16 sm:mt-20 lg:mt-28">
+      <div className="flex flex-col mt-16 sm:mt-20 lg:mt-28" data-aos="fade-down">
         <h2 className="font-poppins text-xl sm:text-2xl lg:text-[32px] font-bold mb-6">
           Category
         </h2>
@@ -47,20 +69,27 @@ export default function HomePage() {
       </div>
 
       {/* POPULAR */}
-      <div className="mt-12 sm:mt-16 lg:mt-20">
+      <div className="mt-12 sm:mt-16 lg:mt-20" data-aos="fade-up">
         
-        <h2 className="font-family-poppins text-xl sm:text-2xl lg:text-[32px] font-bold">Menu Favorite</h2>
+        <h2 className="font-family-poppins text-xl sm:text-2xl lg:text-[32px] font-bold">
+          Menu  
+          <span className="text-primary ">  Ter-Favorite 💗</span>
+        </h2>
         
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-6">
-          {popularProducts.map((item) => (
-            <ProductCard key={item.id} item={item} />
+          {popularProducts.map((item, index) => (
+            <div key={item.id} data-aos="fade-up" data-aos-delay={index * 150}>
+              <ProductCard item={item} />
+            </div>
           ))}
         </div>
       </div>
 
       {/* TESTIMONIAL */}
-      <TestimonialSection />
+      <div className="mt-16 sm:mt-20 lg:mt-28" data-aos="fade-up">
+        <TestimonialSection />
+      </div>
 
 
 

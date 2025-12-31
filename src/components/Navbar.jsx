@@ -22,7 +22,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-4 z-50 transition-all duration-300 rounded-2xl
+      className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-7xl transition-all duration-300 rounded-2xl
       ${isScrolled 
         ? "bg-white/90 backdrop-blur-md shadow-md"
         : "bg-transparent"
