@@ -6,94 +6,114 @@ import { products } from "../data/products";
 
 
 export default function HomePage() {
-  // Ambil 4 produk dengan likes terbanyak
+  
   const popularProducts = [...products]
     .sort((a, b) => b.likes - a.likes)
     .slice(0, 4);
 
   return (
-    <main className="pt-8">
+    <main className="overflow-hidden">
       {/* HERO */}
-      <section className="flex flex-col-reverse lg:flex-row w-full items-center justify-between gap-8 lg:gap-x-14">
+      <section id="hero" className="min-h-[calc(100vh-80px)] flex flex-col-reverse lg:flex-row w-full items-center justify-center gap-8 lg:gap-x-14 pt-20 pb-12">
         {/* left content */}
-        <div className="flex flex-col gap-4 sm:gap-6 text-center lg:text-left" data-aos="flip-down">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-none">
-            Masak Praktis Tanpa Ribet
+        <div className="flex flex-col gap-5 sm:gap-6 text-center lg:text-left max-w-xl" data-aos="fade-right">
+          <span className="text-primary font-semibold text-sm uppercase tracking-wider">🍳 Platform Resep Terbaik</span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-bold leading-tight lg:leading-[1.1] text-gray-900">
+            Masak Praktis <br className="hidden lg:block" />
+            <span className="text-primary">Tanpa Ribet</span>
           </h1>
 
-          <p className="font-poppins text-base sm:text-lg text-gray-600 max-w-lg mx-auto lg:mx-0">
-            Resep favorit untuk masakan simpel hingga spesial, kapan saja kam
+          <p className="font-poppins text-base sm:text-lg text-gray-600 leading-relaxed">
+            Temukan resep favoritmu dari masakan simpel hingga spesial. 
+            Panduan lengkap dengan langkah mudah untuk semua level.
           </p>
           
-          <button
-            className="relative inline-flex items-center px-6 py-3 overflow-hidden font-medium transition-all bg-primary rounded-md group w-fit mx-auto lg:mx-0"
-          >
-            <span
-              className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-orange-500 rounded group-hover:-mr-4 group-hover:-mt-4"
-            >
-              <span
-                className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"
-              ></span>
-            </span>
-            <span
-              className="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-orange-500 rounded group-hover:-ml-4 group-hover:-mb-4"
-            >
-              <span
-                className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"
-              ></span>
-            </span>
-            <span
-              className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-orange-400 rounded-md group-hover:translate-x-0"
-            ></span>
-            <span
-              className="relative text-white transition-colors duration-200 ease-in-out group-hover:text-white"
-            >Jelajahi Resep</span>
-          </button>
+          <div className="flex flex-col sm:flex-row gap-4 mt-2 justify-center lg:justify-start">
+            <button className="px-8 py-4 bg-primary hover:bg-orange-400 text-white font-semibold rounded-xl shadow-lg shadow-orange-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              Jelajahi Resep
+            </button>
+            <button className="px-8 py-4 bg-white hover:bg-gray-50 text-gray-700 font-semibold rounded-xl border-2 border-gray-200 hover:border-primary hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd"/>
+              </svg>
+              Lihat Video
+            </button>
+          </div>
 
+          {/* Rating */}
+          <div className="flex gap-8 mt-4 justify-center lg:justify-start">
+            <div className="text-center lg:text-left">
+              <p className="text-2xl sm:text-3xl font-bold text-gray-900">500+</p>
+              <p className="text-sm text-gray-500">Resep</p>
+            </div>
+            <div className="text-center lg:text-left">
+              <p className="text-2xl sm:text-3xl font-bold text-gray-900">50K+</p>
+              <p className="text-sm text-gray-500">Pengguna</p>
+            </div>
+            <div className="text-center lg:text-left">
+              <p className="text-2xl sm:text-3xl font-bold text-gray-900">4.9</p>
+              <p className="text-sm text-gray-500">Rating ⭐</p>
+            </div>
+          </div>
         </div>
 
-        {/* right content */}
-        <img 
-          src={foto1} 
-          alt="Cooking Illustration" 
-          className="w-48 sm:w-64 md:w-80 lg:w-[420px] xl:w-[520px] h-auto object-contain" data-aos="zoom-in" 
-        />
+        <div className="relative" data-aos="fade-left">
+          <div className="absolute -inset-4 bg-gradient-to-r from-orange-200 to-amber-200 rounded-full blur-3xl opacity-40"></div>
+          <img 
+            src={foto1} 
+            alt="Cooking Illustration" 
+            className="relative w-64 sm:w-80 md:w-96 lg:w-[450px] xl:w-[500px] h-auto object-contain drop-shadow-2xl" 
+          />
+        </div>
       </section>
 
       {/* CATEGORY */}
-      <div className="flex flex-col mt-16 sm:mt-20 lg:mt-28" data-aos="fade-down">
-        <h2 className="font-poppins text-xl sm:text-2xl lg:text-[32px] font-bold mb-6">
-          Category
-        </h2>
+      <section id="category" className="py-16 sm:py-20 lg:py-24">
+        <div className="text-center mb-10" data-aos="fade-up">
+          <span className="text-primary font-semibold text-sm uppercase tracking-wider">Kategori</span>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mt-2 text-gray-900">
+            Pilih Sesuai Selera
+          </h2>
+          <p className="text-gray-500 mt-3 max-w-md mx-auto">
+            Berbagai kategori resep untuk memenuhi semua kebutuhan memasakmu
+          </p>
+        </div>
         <CategoryList/>
-      </div>
+      </section>
 
       {/* POPULAR */}
-      <div className="mt-12 sm:mt-16 lg:mt-20" data-aos="fade-up">
+      <section id="menupopular" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-orange-50/50 to-white rounded-3xl -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-10" data-aos="fade-up">
+          <span className="text-primary font-semibold text-sm uppercase tracking-wider">Paling Populer</span>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mt-2 text-gray-900">
+            Menu Ter-Favorite 💗
+          </h2>
+          <p className="text-gray-500 mt-3 max-w-md mx-auto">
+            Resep paling disukai oleh pengguna kami
+          </p>
+        </div>
         
-        <h2 className="font-family-poppins text-xl sm:text-2xl lg:text-[32px] font-bold">
-          Menu  
-          <span className="text-primary ">  Ter-Favorite 💗</span>
-        </h2>
-        
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {popularProducts.map((item, index) => (
-            <div key={item.id} data-aos="fade-up" data-aos-delay={index * 150}>
+            <div key={item.id} data-aos="fade-up" data-aos-delay={index * 100}>
               <ProductCard item={item} />
             </div>
           ))}
         </div>
-      </div>
+
+        <div className="text-center mt-10" data-aos="fade-up">
+          <button className="px-8 py-3 bg-white hover:bg-primary text-primary hover:text-white font-semibold rounded-xl border-2 border-primary hover:-translate-y-1 transition-all duration-300">
+            Lihat Semua Resep →
+          </button>
+        </div>
+      </section>
 
       {/* TESTIMONIAL */}
-      <div className="mt-16 sm:mt-20 lg:mt-28" data-aos="fade-up">
+      <section id="testi" className="py-16 sm:py-20 lg:py-24">
         <TestimonialSection />
-      </div>
+      </section>
 
 
-
-      
     </main>
   );
 }

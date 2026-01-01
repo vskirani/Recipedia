@@ -12,7 +12,7 @@ export default function TestimonialSection() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
-        {/* Featured Card - Large */}
+        
         <div className="md:col-span-5 bg-gradient-to-br from-primary/10 to-orange-50 rounded-3xl p-8 border border-primary/20 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group">
           <div className="flex items-center gap-4 mb-6">
             <img
@@ -39,7 +39,7 @@ export default function TestimonialSection() {
           </div>
         </div>
 
-        {/* Right Side Cards */}
+        
         <div className="md:col-span-7 flex flex-col gap-6">
           {testimonials.slice(1).map((item, index) => (
             <div

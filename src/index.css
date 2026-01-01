@@ -11,8 +11,14 @@
   --font-family-pacifico: "Pacifico", cursive;
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-family-poppins);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Hide scrollbar */
@@ -22,5 +28,23 @@ body {
 }
 .scrollbar-hide::-webkit-scrollbar {
   display: none;  /* Chrome, Safari, Opera */
+}
+
+/* Custom scrollbar for body */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFC75F;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e6a945;
 }
 

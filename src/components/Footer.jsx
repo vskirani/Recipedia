@@ -6,9 +6,9 @@ export default function Footer() {
   return (
     <footer className="mt-20 bg-gradient-to-br from-primary/10 via-orange-50 to-amber-50 rounded-t-3xl">
       <div className="pt-16 pb-8 px-6 sm:px-8 lg:px-12">
-        {/* Main Footer Content */}
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-          {/* Brand */}
+          
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <img src={logo} alt="Recipedia Logo" className="h-10 w-auto" />
@@ -17,7 +17,8 @@ export default function Footer() {
             <p className="text-amber-800/70 text-sm leading-relaxed mb-6">
               Temukan resep favoritmu, dari yang simpel sampai spesial. Masak jadi lebih santai, tanpa ribet.
             </p>
-            {/* Social Icons */}
+            
+
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 bg-white/80 hover:bg-primary text-primary hover:text-white rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-sm">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -37,18 +38,18 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
+          
           <div>
             <h4 className="text-lg font-semibold mb-5 text-amber-900">Quick Links</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-amber-800/70 hover:text-primary transition-colors duration-300 text-sm">Home</a></li>
-              <li><a href="#" className="text-amber-800/70 hover:text-primary transition-colors duration-300 text-sm">Resep</a></li>
-              <li><a href="#" className="text-amber-800/70 hover:text-primary transition-colors duration-300 text-sm">Kategori</a></li>
-              <li><a href="#" className="text-amber-800/70 hover:text-primary transition-colors duration-300 text-sm">Favorite</a></li>
+              <li><a href="#hero" className="text-amber-800/70 hover:text-primary transition-colors duration-300 text-sm">Home</a></li>
+              <li><a href="#category" className="text-amber-800/70 hover:text-primary transition-colors duration-300 text-sm">Kategori</a></li>
+              <li><a href="#menupopular" className="text-amber-800/70 hover:text-primary transition-colors duration-300 text-sm">Menu Popular</a></li>
+              <li><a href="#testi" className="text-amber-800/70 hover:text-primary transition-colors duration-300 text-sm">Testimonial</a></li>
             </ul>
           </div>
 
-          {/* Categories */}
+          
           <div>
             <h4 className="text-lg font-semibold mb-5 text-amber-900">Kategori</h4>
             <ul className="space-y-3">
@@ -60,7 +61,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Newsletter */}
+          
           <div>
             <h4 className="text-lg font-semibold mb-5 text-amber-900">Newsletter</h4>
             <p className="text-amber-800/70 text-sm mb-4">
@@ -81,7 +82,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Divider */}
+        
         <div className="border-t border-primary/20 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-amber-800/70 text-sm">
