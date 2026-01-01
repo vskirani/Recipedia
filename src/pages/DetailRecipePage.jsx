@@ -115,7 +115,7 @@ export default function DetailRecipePage() {
           
           <div className="flex gap-4 mt-10">
             <button className="flex-1 px-6 py-4 bg-primary hover:bg-orange-400 text-white font-semibold rounded-xl shadow-lg shadow-orange-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
-              <span>❤️</span> Simpan Resep
+              <span>🧾</span> Simpan Resep
             </button>
             <button className="px-6 py-4 bg-white hover:bg-gray-50 text-gray-700 font-semibold rounded-xl border-2 border-gray-200 hover:border-primary hover:-translate-y-1 transition-all duration-300">
               <span>🔗</span> Bagikan
