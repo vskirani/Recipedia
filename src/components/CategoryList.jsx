@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import makananUtama from "../assets/image/maincourse.png";
 import sarapan from "../assets/image/sarapan.png";
 import dessert from "../assets/image/dessert.png";
@@ -16,7 +17,12 @@ const categoryImages ={
 
 }
 export default function CategoryList(){
+    const navigate = useNavigate();
     const categories = [... new Set(products.map((item)=> item.category))];
+    
+    // Fungsi untuk convert nama kategori ke URL-friendly
+    const toSlug = (text) => text.toLowerCase().replace(/ /g, "-");
+
     return(
         <div className="flex justify-between overflow-x-auto scrollbar-hide">
             {categories.map((category, index) => (
@@ -24,7 +30,7 @@ export default function CategoryList(){
                     <CategoryCard
                         title={category}
                         image={categoryImages[category]}
-                        onClick={() => console.log(category)}
+                        onClick={() => navigate(`/kategori/${toSlug(category)}`)}
                     />
                 </div>
             ))}
