@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import HomePage from './pages/HomePage'
 import DetailPage from './pages/DetailRecipePage'
 import Footer from './components/Footer'
+import AllResep from './pages/ResepPage'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -26,6 +27,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/resep/:id" element={<DetailPage />} />
+            <Route path="/allresep" element={<AllResep />} />
           </Routes>
         </div>
         <Footer />

@@ -44,7 +44,7 @@ export default function Navbar() {
         <nav className="hidden md:flex justify-center">
           <ul className="flex gap-4 lg:gap-8 text-sm lg:text-base font-semibold text-primary">
             <li><Link to="/" className="hover:text-orange-600 cursor-pointer transition-colors">Home</Link></li>
-            <li><a className="hover:text-orange-600 cursor-pointer transition-colors">Resep</a></li>
+            <li><Link to="/allresep" className="hover:text-orange-600 cursor-pointer transition-colors">Resep</Link></li>
             <li><a className="hover:text-orange-600 cursor-pointer transition-colors">Favorite</a></li>
           </ul>
         </nav>
@@ -111,8 +111,8 @@ export default function Navbar() {
       {isMobileMenuOpen && (
         <nav className="md:hidden mt-4 pb-2">
           <ul className="flex flex-col gap-3 text-base font-semibold text-primary">
-            <li><a className="block py-2 px-3 rounded-lg hover:bg-orange-100 cursor-pointer transition-colors">Home</a></li>
-            <li><a className="block py-2 px-3 rounded-lg hover:bg-orange-100 cursor-pointer transition-colors">Resep</a></li>
+            <li><Link to="/" className="block py-2 px-3 rounded-lg hover:bg-orange-100 cursor-pointer transition-colors">Home</Link></li>
+            <li><Link to="/allresep" className="block py-2 px-3 rounded-lg hover:bg-orange-100 cursor-pointer transition-colors">Resep</Link></li>
             <li><a className="block py-2 px-3 rounded-lg hover:bg-orange-100 cursor-pointer transition-colors">Favorite</a></li>
           </ul>
         </nav>

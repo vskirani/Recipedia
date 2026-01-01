@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import foto1 from "../assets/image/hero.png";
 import CategoryList from "../components/CategoryList";
 import ProductCard from "../components/ProductCard";
@@ -29,9 +30,9 @@ export default function HomePage() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 mt-2 justify-center lg:justify-start">
-            <button className="px-8 py-4 bg-primary hover:bg-orange-400 text-white font-semibold rounded-xl shadow-lg shadow-orange-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+            <Link to="/allresep" className="px-8 py-4 bg-primary hover:bg-orange-400 text-white font-semibold rounded-xl shadow-lg shadow-orange-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               Jelajahi Resep
-            </button>
+            </Link>
             <button className="px-8 py-4 bg-white hover:bg-gray-50 text-gray-700 font-semibold rounded-xl border-2 border-gray-200 hover:border-primary hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd"/>
@@ -102,9 +103,9 @@ export default function HomePage() {
         </div>
 
         <div className="text-center mt-10" data-aos="fade-up">
-          <button className="px-8 py-3 bg-white hover:bg-primary text-primary hover:text-white font-semibold rounded-xl border-2 border-primary hover:-translate-y-1 transition-all duration-300">
+          <Link to="/allresep" className="px-8 py-3 bg-white hover:bg-primary text-primary hover:text-white font-semibold rounded-xl border-2 border-primary hover:-translate-y-1 transition-all duration-300">
             Lihat Semua Resep →
-          </button>
+          </Link>
         </div>
       </section>
 
