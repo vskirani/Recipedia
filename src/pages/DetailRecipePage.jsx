@@ -1,9 +1,23 @@
+import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { products } from "../data/products";
 
 export default function DetailRecipePage() {
   const { id } = useParams();
   const product = products.find((p) => p.id === parseInt(id));
+  
+  // State untuk likes
+  const [likes, setLikes] = useState(product?.likes || 0);
+  const [isLiked, setIsLiked] = useState(false);
+
+  const handleLike = () => {
+    if (isLiked) {
+      setLikes(likes - 1);
+    } else {
+      setLikes(likes + 1);
+    }
+    setIsLiked(!isLiked);
+  };
 
   if (!product) {
     return (
@@ -31,7 +45,7 @@ export default function DetailRecipePage() {
             />
           </div>
           
-          
+          {/* Stats */}
           <div className="grid grid-cols-3 gap-4 mt-6">
             <div className="bg-white rounded-2xl p-4 text-center shadow-md border border-orange-100">
               <p className="text-2xl mb-1">⏱️</p>
@@ -43,11 +57,26 @@ export default function DetailRecipePage() {
               <p className="text-xl font-bold text-gray-900">{product.calories}</p>
               <p className="text-sm text-gray-500">Kalori</p>
             </div>
-            <div className="bg-white rounded-2xl p-4 text-center shadow-md border border-orange-100">
-              <p className="text-2xl mb-1">❤️</p>
-              <p className="text-xl font-bold text-gray-900">{product.likes}</p>
-              <p className="text-sm text-gray-500">Likes</p>
-            </div>
+            
+            {/* Likes Button - Bisa diklik */}
+            <button 
+              onClick={handleLike}
+              className={`rounded-2xl p-4 text-center shadow-md border transition-all duration-300 transform hover:scale-105 active:scale-95
+                ${isLiked 
+                  ? 'bg-gradient-to-br from-red-50 to-pink-50 border-red-200 shadow-red-100' 
+                  : 'bg-white border-orange-100 hover:border-red-200'
+                }`}
+            >
+              <p className={`text-2xl mb-1 transition-transform duration-300 ${isLiked ? 'scale-125' : ''}`}>
+                {isLiked ? '❤️' : '🤍'}
+              </p>
+              <p className={`text-xl font-bold ${isLiked ? 'text-red-500' : 'text-gray-900'}`}>
+                {likes.toLocaleString()}
+              </p>
+              <p className={`text-sm ${isLiked ? 'text-red-400' : 'text-gray-500'}`}>
+                {isLiked ? 'Liked!' : 'Likes'}
+              </p>
+            </button>
           </div>
         </div>
 
