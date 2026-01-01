@@ -24,18 +24,6 @@ export default function ResepPage() {
 
   return (
     <main className="pt-24 pb-16 min-h-screen">
-      {/* BACK */}
-      <Link 
-        to="/" 
-        className="inline-flex items-center gap-2 text-gray-600 hover:text-primary transition-colors mb-8"
-        data-aos="fade-right"
-      >
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-        </svg>
-        Kembali
-      </Link>
-
       
       <div className="text-center mb-10" data-aos="fade-up">
         <span className="text-primary font-semibold text-sm uppercase tracking-wider">Koleksi Lengkap</span>

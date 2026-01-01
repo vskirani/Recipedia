@@ -18,16 +18,6 @@ export default function DetailRecipePage() {
 
   return (
     <main className="pt-24 pb-16 min-h-screen">
-      <Link 
-        to="/" 
-        className="inline-flex items-center gap-2 text-gray-600 hover:text-primary transition-colors mb-8"
-        data-aos="fade-right"
-      >
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-        </svg>
-        Kembali
-      </Link>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
         
