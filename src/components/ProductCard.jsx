@@ -1,5 +1,8 @@
+import { Link } from "react-router-dom";
+
 export default function ProductCard({ item }) {
   return (
+    <Link to={`/resep/${item.id}`}>
     <div className="group bg-white rounded-2xl overflow-hidden 
                     shadow-md hover:shadow-2xl 
                     transform hover:-translate-y-3 
@@ -57,5 +60,6 @@ export default function ProductCard({ item }) {
         </button>
       </div>
     </div>
+    </Link>
   );
 }

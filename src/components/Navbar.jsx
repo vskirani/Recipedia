@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import logo from "../assets/logo2.png";
 import profile from "../assets/image/avatar/avatar4.svg"
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -30,7 +31,7 @@ export default function Navbar() {
       px-4 sm:px-6 py-3`}>
       <div className="flex items-center justify-between">
 
-        <div className="flex items-center">
+        <Link to="/" className="flex flex-row items-center">
           <img
             src={logo}
             alt="Tastebite Logo"
@@ -38,11 +39,11 @@ export default function Navbar() {
           />
           <p className="ml-2 text-xl sm:text-2xl text-primary font-family-poppins font-bold">
             Recipedia</p>
-        </div>
+        </Link>
 
         <nav className="hidden md:flex justify-center">
           <ul className="flex gap-4 lg:gap-8 text-sm lg:text-base font-semibold text-primary">
-            <li><a className="hover:text-orange-600 cursor-pointer transition-colors">Home</a></li>
+            <li><Link to="/" className="hover:text-orange-600 cursor-pointer transition-colors">Home</Link></li>
             <li><a className="hover:text-orange-600 cursor-pointer transition-colors">Resep</a></li>
             <li><a className="hover:text-orange-600 cursor-pointer transition-colors">Favorite</a></li>
           </ul>
